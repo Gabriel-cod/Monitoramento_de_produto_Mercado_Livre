@@ -29,7 +29,7 @@ driver.get('https://lista.mercadolivre.com.br/celas#D[A:celas]'); sleep(5)
 arquivo_csv = open('celas.csv', 'w', encoding='utf-8', newline='')
 arquivo_csv.close()
 while True:
-    driver.execute_script('window.scrollTo(0, document.body.scrollHeight)'); sleep(300)
+    driver.execute_script('window.scrollTo(0, document.body.scrollHeight)'); sleep(60)
     titulos = driver.find_elements(By.XPATH, "//div[@class='ui-search-item__group ui-search-item__group--title shops__items-group']//a//h2")
 
     precos = driver.find_elements(By.XPATH, "//div[@class='ui-search-item__group ui-search-item__group--price ui-search-item__group--price-grid-container shops__items-group']//div//div//div//span//span[@class='andes-money-amount__fraction']")
